@@ -84,7 +84,6 @@
             $(".btn-update-cart").on("click", function () {
                 var id = $(this).attr('id_pro');
                 var qty = parseInt($(this).parent().find('input[name="quantity"]').val());
-                alert(qty)
                 $.ajax({
 
                     type: "POST",
