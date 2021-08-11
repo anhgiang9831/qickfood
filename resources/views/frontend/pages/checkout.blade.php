@@ -83,23 +83,23 @@
                                                     <div class="field">
                                                         <label>Họ và tên</label>
                                                         <div class="field">
-                                                            <input type="text" id="name" name="name"
+                                                            <input required  type="text" id="name" name="name"
                                                                    placeholder="Họ tên" value="@if(auth()->guard('web')->user()){{ auth()->guard('web')->user()->name }} @endif">
                                                         </div>
                                                     </div>
                                                     <div class="field">
                                                         <label>Số điện thoại</label>
                                                         <div class="field">
-                                                            <input type="text" id="phone" name="phone" placeholder="Số điện thoại"
-                                                                   value="">
+                                                            <input required type="text" id="phone" name="phone" placeholder="Số điện thoại"
+                                                                   value="@if(auth()->guard('web')->user()){{ auth()->guard('web')->user()->phone }} @endif">
                                                         </div>
                                                     </div>
 
                                                     <div class="field">
                                                         <label>Địa chỉ</label>
                                                         <div class="field">
-                                                            <input type="text" id="address" name="address"
-                                                                   placeholder="Địa chỉ nhận hàng" value="">
+                                                            <input required type="text" id="address" name="address"
+                                                                   placeholder="Địa chỉ nhận hàng" value="@if(auth()->guard('web')->user()){{ auth()->guard('web')->user()->address }} @endif">
                                                         </div>
                                                     </div>
                                                     <div>

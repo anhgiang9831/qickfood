@@ -30,17 +30,17 @@
 
             <div class="form-group">
                 <label for="">Tên sản phẩm </label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Tên sản phẩm..."
+                <input required type="text" name="name" id="name" class="form-control" placeholder="Tên sản phẩm..."
                        value="{{old('name')}}">
             </div>
             <div class="form-group">
                 <label for="">Số lượng </label>
-                <input required type="text" name="qty" id="name" class="form-control" placeholder="Số lượng..."
+                <input required type="number" min="1" name="qty" id="name" class="form-control" placeholder="Số lượng..."
                        value="{{old('qty')}}">
             </div>
         <div class="form-group">
                 <label for="">Gía sản phẩm </label>
-                <input type="text" name="price" id="name" class="form-control" placeholder="Gía sản phẩm..."
+                <input required type="text" name="price" id="name" class="form-control" placeholder="Gía sản phẩm..."
                        value="{{old('price')}}">
             </div>
 

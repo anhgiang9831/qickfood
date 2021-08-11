@@ -33,7 +33,6 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->promotion = $request->discount;
         $product->qty = $request->qty;
-        $product->supplier = $request->supplier;
 
         if ($request->hasFile('images')) {
             $f = $request->file('images')->getClientOriginalName();
@@ -75,7 +74,6 @@ class ProductController extends Controller
         $product->status = $request->status;
         $product->hot = $request->hot;
         $product->price = $request->price;
-        $product->supplier = $request->supplier;
         $product->promotion = $request->discount;
         $product->qty = $request->qty;
 

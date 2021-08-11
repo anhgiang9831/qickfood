@@ -39,7 +39,7 @@
                         <?php $cates = DB::table('categories')->get(); ?>
 
                         <div class="ui simple dropdown autooff item"><a href="javascript:void(0)"><i
-                                    class="icon birthday"></i>Thực đơn</a><i class="dropdown icon"></i>
+                                    class="fa fa-book"></i>Thực đơn</a><i class="dropdown icon"></i>
                             <div class="menu">
                                 @foreach($cates as $item)
 

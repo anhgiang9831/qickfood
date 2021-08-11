@@ -25,6 +25,20 @@
                         </div>
                         <div class="clear"></div>
 
+
+                        <div class="input form-group">
+                            <input type="text" class="clsip form-control" name="phone" required="" placeholder="Số điện thoại">
+                        </div>
+
+                        <div class="clear"></div>
+
+
+                        <div class="input form-group">
+                            <input type="text" class="clsip form-control" name="address" required="" placeholder="Địa chỉ">
+                        </div>
+
+                        <div class="clear"></div>
+
                         <div class="input form-group">
                             <input type="password" class="clsip form-control" name="password" required=""
                                    placeholder="Mật khẩu">

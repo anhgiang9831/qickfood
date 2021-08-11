@@ -140,6 +140,7 @@ Route::group(['prefix' => 'admins', 'middleware' => ['admin']], function () {
 
 Route::get('admin-login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('admin-login', 'Auth\AdminLoginController@login')->name('post.login_admin');
+Route::get('logout-admin', 'Auth\AdminLoginController@logout')->name('admin.logout');
 
 Auth::routes();
 
