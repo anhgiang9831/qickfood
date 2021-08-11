@@ -30,4 +30,7 @@
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <style type="text/css">
+        .alert ul li{color: #fff !important;}
+    </style>
 </head>

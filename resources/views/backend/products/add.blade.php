@@ -46,7 +46,7 @@
 
    <div class="form-group">
                 <label for="">Khuyến mãi % </label>
-                <input type="text" name="discount" id="price" class="form-control" placeholder="Khuyến mãi %"
+                <input required="" value="0" type="text" name="discount" id="price" class="form-control" placeholder="Khuyến mãi %"
                        value="{{old('discount')}}">
             </div>
             <div class="form-group">

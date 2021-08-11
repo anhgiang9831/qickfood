@@ -30,7 +30,7 @@
 
             <div class="form-group">
                 <label for="">Tên sản phẩm </label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Tên sản phẩm..."
+                <input required type="text" name="name" id="name" class="form-control" placeholder="Tên sản phẩm..."
                        value="{{$products['name']}}">
             </div>
             <div class="form-group">
@@ -41,13 +41,13 @@
 
             <div class="form-group">
                 <label for="">Gía sản phẩm </label>
-                <input type="text" name="price" id="name" class="form-control" placeholder="Gía sản phẩm..."
+                <input required type="number" name="price" id="name" class="form-control" placeholder="Gía sản phẩm..."
                        value="{{$products['price']}}">
             </div>
 
             <div class="form-group">
                 <label for="">Khuyến mãi % </label>
-                <input type="text" name="discount" id="price" class="form-control" placeholder="Khuyến mãi %"
+                <input required type="text" name="discount" id="price" class="form-control" placeholder="Khuyến mãi %"
                        value="{{$products['promotion']}}">
             </div>
             <div class="form-group">
