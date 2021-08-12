@@ -11,6 +11,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+// use Validator;
+
 class RegisterController extends Controller
 {
     /*
@@ -49,14 +51,16 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:customers'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-    }
+    // protected function validator(array $data)
+    // {
+    //     return Validator::make($data, [
+    //         'name' => ['required', 'string', 'max:255'],
+    //         'email' => ['required', 'string', 'email', 'max:255', 'unique:customers'],
+    //         'password' => ['required', 'string', 'min:8', 'confirmed'],
+    //                     'password' => 'required|password_confirmation|min:6',
+
+    //     ]);
+    // }
 
     /**
      * Create a new user instance after a valid registration.
@@ -76,15 +80,22 @@ class RegisterController extends Controller
 
     public function register(Register $request)
     {
+        if($request->password_confirmation != $request->password) {
+         return redirect()->route('register')->withErrors(['Mật khẩu nhập lại không khớp']);
 
-        $user = new Customer();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
-        $user->address = $request->address;
-        $user->password = Hash::make($request['password']);
-        $user->save();
-        return redirect()->route('login');
+
+        } else {
+            $user = new Customer();
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->phone = $request->phone;
+            $user->address = $request->address;
+            $user->password = Hash::make($request['password']);
+            $user->save();
+            return redirect()->route('login');
+        }
+
+        
     }
 
     public function showRegistrationForm ()

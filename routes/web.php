@@ -15,6 +15,35 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.master');
 });
+// Route::get('/api', function(){
+//   // Get the number of days to show data for, with a default of 7
+//   // $days = Input::get('days', 7);
+
+//   // $range = CarbonCarbon::now()->subDays($days);
+//     $stats = DB::table("orders_detail")
+//     ->select('products.*', 'orders_detail.*', DB::raw('SUM(orders_detail.qty) as total'))->
+//     join('products','orders_detail.pro_id', '=', 'products.id')->groupBy("orders_detail.created_at")
+          
+
+//     ->limit(10)->get();
+//     dd($stats);
+//  return $stats;
+//   // $stats = DB::table('orders')
+//   //   ->where('created_at', '>=', $range)
+//   //   ->groupBy('date')
+//   //   ->orderBy('date', 'ASC')
+//   //   ->get([
+//   //     DB::raw('Date(created_at) as date'),
+//   //     DB::raw('COUNT(*) as value')
+//   //   ]);
+
+//   return "dedede";
+// });
+Route::get('api', 'UserChartController@getDataKH');
+Route::get('api-kh', 'UserChartController@getDataKHMua');
+
+
+Route::get('thong-ke-khach-hang', 'UserChartController@index');
 
 Route::get('/', 'PagesController@home')->name('pages.home');
 Route::get('/checkout', 'PagesController@checkout')->name('checkout');
@@ -112,17 +141,9 @@ Route::group(['prefix' => 'admins', 'middleware' => ['admin']], function () {
     });
 
     Route::prefix('report')->group(function () {
-        Route::get('/report-month', 'ReportController@index')->name('report.list');
+        Route::get('/thong-ke', 'ReportController@index')->name('report.list');
 
-        Route::post('doanh-so-ban-thang', 'ReportController@getBanHangThang')->name('report.post_ban_hang');
-
-        Route::get('thong-ke-thang', 'ReportController@thongKeThang')->name('report.thong_ke_thang');
-
-        Route::get('/add', 'ReportController@getAdd')->name('report.get_add');
-        Route::post('/add', 'ReportController@postAdd')->name('report.post_add');
-        route::get("/edit/{id}", "ReportController@getEdit")->name("report.get_edit");
-        route::post("/edit/{id}", "ReportController@postEdit")->name("report.post_edit");
-        route::get("/del/{id}", "ReportController@getdel")->name("report.get_delete");
+    
 
     });
 

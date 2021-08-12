@@ -43,6 +43,11 @@
                             <input type="password" class="clsip form-control" name="password" required=""
                                    placeholder="Mật khẩu">
                         </div>
+                        <div class="input form-group">
+                            <input type="password" class="clsip form-control" name="password_confirmation" required=""
+                                   placeholder="Nhập lại mật khẩu">
+                        </div>
+
 
 
                         <div class="input form-group"><input type="submit" name="frmSubmit" id="frmSubmit"

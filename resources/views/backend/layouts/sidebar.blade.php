@@ -99,55 +99,13 @@
                 </ul>
             </li>
 
-{{--            <li class="treeview @if(isset($open) && $open == 'slides') active menu-open @endif">--}}
-{{--                <a href="#">--}}
-{{--                    <i class="fa fa-table"></i> <span>Thống kế, báo cáo</span>--}}
-{{--                    <span class="pull-right-container">--}}
-{{--              <i class="fa fa-angle-left pull-right"></i>--}}
-{{--            </span>--}}
-{{--                </a>--}}
-{{--                <ul class="treeview-menu">--}}
-{{--                    <li><a href="{{ route('report.list') }}"><i class="fa fa-circle-o"></i> Thống kê bán hàng</a></li>--}}
-{{--                    <li><a href="{{ route('report.thong_ke_thang') }}"><i class="fa fa-circle-o"></i> Thống kê doanh thu</a></li>--}}
-
-{{--                </ul>--}}
-{{--            </li>--}}
-
-
-{{--            <li class="treeview @if(isset($open) && $open == 'warehouse') active menu-open @endif">--}}
-{{--                <a href="#">--}}
-{{--                    <i class="fa fa-table"></i> <span>Kho hàng</span>--}}
-{{--                    <span class="pull-right-container">--}}
-{{--              <i class="fa fa-angle-left pull-right"></i>--}}
-{{--            </span>--}}
-{{--                </a>--}}
-{{--                <ul class="treeview-menu">--}}
-{{--                    <li><a href="{{ route('warehouse.get_add') }}"><i class="fa fa-circle-o"></i> Nhập Kho</a></li>--}}
-{{--                    <li><a href="{{ route('warehouse.list') }}"><i class="fa fa-circle-o"></i> Tồn kho</a></li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
-
-{{--            <li>--}}
-{{--                <a href="{{ route('contact.list') }}">--}}
-{{--                    <i class="fa fa-th"></i> <span>Quản lý feedback</span>--}}
-{{--                    <span class="pull-right-container">--}}
-
-{{--            </span>--}}
-{{--                </a>--}}
-{{--            </li>--}}
-
-{{--            <li class="treeview @if(isset($open) && $open == 'slides') active menu-open @endif">--}}
-{{--                <a href="#">--}}
-{{--                    <i class="fa fa-table"></i> <span>Quản lý slides</span>--}}
-{{--                    <span class="pull-right-container">--}}
-{{--              <i class="fa fa-angle-left pull-right"></i>--}}
-{{--            </span>--}}
-{{--                </a>--}}
-{{--                <ul class="treeview-menu">--}}
-{{--                    <li><a href="{{ route('slides.get_add') }}"><i class="fa fa-circle-o"></i> Thêm slide</a></li>--}}
-{{--                    <li><a href="{{ route('slides.list') }}"><i class="fa fa-circle-o"></i> Danh sách</a></li>--}}
-{{--                </ul>--}}
-{{--            </li>--}}
+ <li>
+                <a href="{{ route('report.list') }}">
+                    <i class="fa fa-th"></i> <span>Thống kê, báo  </span>
+                    <span class="pull-right-container">
+            </span>
+                </a>
+            </li>
 
         </ul>
     </section>
